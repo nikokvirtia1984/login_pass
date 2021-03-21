@@ -26,8 +26,7 @@ def reg():
     button_register.pack()
 
     def save():
-        login_pass_save = {}
-        login_pass_save[register_login.get()] = register_pass1.get()
+        login_pass_save = {register_login.get(): register_pass1.get()}
         f = open('login.txt', 'wb')
         pickle.dump(login_pass_save, f)
         f.close()
